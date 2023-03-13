@@ -1,0 +1,19 @@
+* {
+    font-family: 'Noto Sans Display', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e3a8a;
+}
+
+.card {
+    padding: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: #1e40af;
+}
