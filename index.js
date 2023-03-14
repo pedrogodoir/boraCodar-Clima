@@ -38,8 +38,6 @@ function search() {
             case 'Clouds':
                 weather.innerHTML = '<i class="fa-solid fa-cloud fa-4x"></i>'
                 break;
-            case 'Haze':
-                break;
             case 'Rain':
                 weather.innerHTML = '<i class="fa-solid fa-cloud-rain fa-4x"></i>'
                 break;
