@@ -1,6 +1,4 @@
 :root {
-    --background-start: #7E57C2;
-    --background-end: #6200EA;
     --text: #FFF;
 }
 
@@ -19,7 +17,6 @@ body {
     align-items: center;
     background-image: url(public/background_clounds.jpg);
     background-size: cover;
-    backdrop-filter: blur(20px);
     height: 100vh;
 }
 
@@ -28,7 +25,7 @@ body {
     padding: 20px;
     width: 35%;
     height: 55%;
-    background-color: rgba(30, 117, 214, 0.2);
+    background-color: rgba(30, 117, 214, 0.4);
     align-items: end;
 }
 
@@ -96,4 +93,28 @@ input::placeholder {
 
 button:hover {
     cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    .card {
+        border-radius: none;
+        padding: 50px;
+        width: 100%;
+        height: 100%;
+    }
+    .content {
+        height: 50%;
+    }
+    .search {
+        margin-top: 30px;
+    }
+    .footer {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-height: 650px) {
+    .content {
+        height: 60%;
+    }
 }
