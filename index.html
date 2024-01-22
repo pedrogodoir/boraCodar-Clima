@@ -15,28 +15,35 @@
 <body>
     <div class="card">
         <div class="search">
-            <i class="fa-solid fa-location-dot"></i>
-            <input class="city" type="text" name="search" placeholder="De qual cidade você é?">
+            <i class="loc fa-solid fa-location-dot"></i>
+            <div>
+                <input class="input" type="text" name="search" onfocus="openlist()" onblur="closelist()" placeholder="De qual cidade você é?">
+                <div class="autocomplete">
+                </div>
+            </div>
             <button class="search-btn" onclick="search()">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
         </div>
-        <div class="content">
-            <div>
-                <div class="weather"></div>
-                <h1 class="temp">--°C</h1>
-                <p class="feels_like">--°C</p>
+        <div class="content-footer">
+            <div class="content">
+                <div class="weather">
+                </div>
+                <div>
+                    <h1 class="temp">°C</h1>
+                    <p class="feels-like">°C</p>
+                </div>
             </div>
+            <div class="footer">
+                <div class="mini-card">
+                    <i class="fa-solid fa-droplet"></i>
+                    <h3 class="humidity">%</h3>
+                </div>
+                <div class="mini-card">
+                    <i class="fa-solid fa-arrow-right" id="arrow"></i>
+                    <h3 class="speed">m/s</h3>
+                </div>
         </div>
-        <div class="footer">
-            <div class="mini-card">
-                <i class="fa-solid fa-droplet"></i>
-                <h3 class="humidity">--%</h3>
-            </div>
-            <div class="mini-card">
-                <i class="fa-solid fa-arrow-right" id="arrow"></i>
-                <h3 class="speed">--m/s</h3>
-            </div>
         </div>
     </div>
     <script src="index.js"></script>

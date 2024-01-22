@@ -26,22 +26,31 @@ body {
     width: 35%;
     height: 55%;
     background-color: rgba(30, 117, 214, 0.4);
-    align-items: end;
+    align-items: center;
 }
 
 .search {
     display: flex;
     flex-direction: row;
     justify-content: right;
-    align-items: center;
+    align-items: top;
     gap: 10px;
 }
 
-.city {
-    width: 140px !important;
+.loc {
+    margin-top: 12px;
 }
 
-.city, .search-btn {
+.search-btn {
+    height: 37px;
+}
+
+.input {
+    width: 140px !important;
+    border: #FFF 1px 1px 1px 1px solid;
+}
+
+.input, .search-btn {
     width: auto;
     padding: 10px;
     background-color: rgba(77, 153, 231, 0); 
@@ -49,9 +58,35 @@ body {
     border-radius: 20px;
 }
 
+.autocomplete {
+    display: block;
+    border-radius: 0px 0px 20px 20px;
+    position: absolute;
+    background-color: rgba(77, 153, 231, 0.7);
+    overflow: scroll;
+    padding: 0px 10px 0px 10px;
+    width: 0px;
+    height: 0px;
+    max-height: 200px;
+}
+  
+.autocomplete-items {
+    overflow: hidden;
+    padding: 5px 0px 5px 0px;
+    cursor: pointer;
+    border-top: 1px solid #fff; 
+    border-radius: 1px;
+}
+
+.content-footer {
+    height: 90%;
+}
+
 .content {
-    height: 75%;
+    height: 80%;
     display: flex;
+    gap: 10px;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -63,6 +98,7 @@ body {
 
 .footer {
     display: flex;
+    align-items: bottom;
     gap: 10px;
 }
 
@@ -96,18 +132,29 @@ button:hover {
 }
 
 @media (max-width: 1000px) {
+    .content-footer {
+        height: 80%;
+    }
+
+    .content {
+        height: 70% !important;
+    }
+
     .card {
-        border-radius: none;
-        padding: 50px;
+        border-radius: 0px;
+        padding: 0px 50px 0px 50px;
         width: 100%;
         height: 100%;
     }
+
     .content {
         height: 50%;
     }
+
     .search {
         margin-top: 30px;
     }
+
     .footer {
         margin-bottom: 20px;
     }
@@ -117,4 +164,26 @@ button:hover {
     .content {
         height: 60%;
     }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: none;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: #FFF;
+    border-radius: 20px;
+    border: 2px solid rgba(77, 153, 231, 1);
+}
+
+::-webkit-scrollbar-corner {
+    background-color: none;
+}
+
+::-webkit-resizer {
+    border: 2px solid rgba(77, 153, 231, 1);
 }
