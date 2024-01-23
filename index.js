@@ -43,7 +43,7 @@ function search() {
         weather.innerHTML = '<i class="fa-solid fa-cloud-rain fa-4x"></i>'
         break;
       default:
-        console.log(haha)
+        console.log("not found")
         break;
     }
   })  
@@ -23089,29 +23089,29 @@ function autocomplete(inp) {
         b = document.createElement("DIV")
         b.setAttribute("class", "autocomplete-items")
         b.setAttribute("onclick", `setinput("${cities[i]}")`)
-        b.innerHTML = cities[i]
+        b.innerHTML += cities[i]
         document.querySelector(".autocomplete").appendChild(b)
+
       }
     }
   }
 }
 
-function openlist() {
-  document.querySelector(".autocomplete").style.transition= "none"
-  document.querySelector(".autocomplete").style.height = "fit-content"
+function openlist() { 
+  document.querySelector(".autocomplete").style.transition = "height 1s .3s"
+  document.querySelector(".autocomplete").style.height = "200px"
   document.querySelector(".autocomplete").style.width = "140px"
   input.style.borderRadius = "20px 20px 0px 0px"
 }
 
 function closelist() {
-  document.querySelector(".autocomplete").style.transition= "height 1s .3s"
+  document.querySelector(".autocomplete").style.transition = "none"
   document.querySelector(".autocomplete").style.height = "0px"
   document.querySelector(".autocomplete").style.width = "0px"
   input.style.borderRadius = "20px"
 }
 
 function setinput(val) {
-  console.log("!!!")
   input.value = val
-
+  closelist()
 }

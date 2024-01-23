@@ -42,12 +42,13 @@ body {
 }
 
 .search-btn {
+    background-color: rgba(77, 153, 231, 0.7) !important;
     height: 37px;
 }
 
 .input {
+    background-color: rgba(77, 153, 231, 0.7) !important;
     width: 140px !important;
-    border: #FFF 1px 1px 1px 1px solid;
 }
 
 .input, .search-btn {
